@@ -131,8 +131,7 @@ footer#grid-container-footer {
 @media (min-width: 320px) and (max-width: 991px) {
     header#grid-container-header {
         /* border: 1px solid red; */
-        color: green;
-        
+
         grid-template-columns: repeat(1, 1fr);
         grid-template-areas:
         "name"
