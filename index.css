@@ -1,0 +1,148 @@
+/* Removing/Resetting default values of HTML, CSS
+and user-agents */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    margin: 0.5em;
+    display: inline;
+}
+
+/* CSS values for desktop */
+#grid-container-body {
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-gap: 1em;
+    grid-template-areas:
+    "h h h h h h h h h h h h"
+    "s s s s s s s s s s s s"
+    "f f f f f f f f f f f f";  
+}
+
+header#grid-container-header {
+    /* border: 1px solid red; */
+    grid-area: h;
+    text-transform: uppercase;
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+    "name links"
+    "hr   hr";
+    align-items: center;
+}   
+
+#name-header {
+    margin-left: 1em;
+    grid-area: name;
+    font-size: 1.5em;
+}
+
+#nav-header {
+    grid-area: links;
+    justify-self: end;
+}
+
+#div-hr {
+    grid-area: hr;
+}
+
+#div-hr hr {
+    margin: 0.5em 0;
+    padding: 0;
+}
+
+section#grid-container-section {
+    /* border: 1px solid green; */
+    grid-area: s;
+    margin: 5% 0 8% 0;
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+    "code-icon"
+    "phrase"
+    "stack-icons";
+    justify-items: center;
+    font-size: 2em;
+}
+
+.fa-code {
+    grid-area: code-icon;
+    font-size: 2em; 
+}
+
+#presentation-section {
+    grid-area: phrase;
+}
+
+#presentation-section ul {
+    grid-area: stack-icons;
+}
+
+footer#grid-container-footer {
+    /* border: 1px solid blue; */
+    grid-area: f;
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+    "phrase"
+    "connect-icons";
+    justify-items: center;
+}
+
+#grid-container-footer p {
+    grid-area: phrase;
+    font-size: 1.5em;
+}
+
+#connection-icons {
+    grid-area: connect-icons;
+    font-size: 2em;
+}
+
+#grid-container-footer i{
+    font-size: 0.7em;
+}
+
+#grid-container-footer i:hover {
+    transform: scale(1.5);
+}
+
+/* Media Query for Tablets and lower widgets devices */
+@media (min-width: 320px) and (max-width: 991px) {
+    header#grid-container-header {
+        /* border: 1px solid red; */
+        color: green;
+        
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+        "name"
+        "links"
+        "hr";
+        align-items: center;
+    }
+
+    #name-header, #nav-header {
+        margin: 0;
+        justify-self: center;
+    }
+}
