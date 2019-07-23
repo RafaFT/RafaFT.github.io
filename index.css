@@ -10,24 +10,8 @@ html{
   height: 100%;
 }
 
-body {
-  min-height: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto 1fr auto;
-  grid-template-areas:
-  "h h"
-  "s s"
-  "f f";
-}
-
 a {
   text-decoration: none;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
 }
 
 ul li {
@@ -35,51 +19,64 @@ ul li {
   display: inline;
 }
 
+body {
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+  "header"
+  "main"
+  "footer";
+}
+
 header {
-  /* border: 1px solid red; */
-  grid-area: h;
+  grid-area: header;
   text-transform: uppercase;
   
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   grid-template-areas:
-  "name links"
-  "hr   hr";
-  align-items: center;
+  "name"
+  "nav"
+  "hr";
 }   
 
+h1 {
+  grid-area: name;
+  font-size: 1.5em;
+  margin: 0.2em auto;
+}
+
 #nav-header {
-  grid-area: links;
-  justify-self: end;
+  grid-area: nav;
 }
 
 #div-hr {
+  margin-top: 0.5em;
   grid-area: hr;
 }
 
-#div-hr hr {
-  margin: 0.5em 0;
-  padding: 0;
+main {
+  grid-area: main;
 }
 
-main {
-  /* border: 1px solid green; */
-  grid-area: s;
-  margin: 5% 0 8% 0;
-
+section {
+  margin-top: 3em;
+  font-size: 2em;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1fr;
   grid-template-areas:
   "code-icon"
   "phrase"
   "stack-icons";
+  row-gap: 0.7em;
   justify-items: center;
-  font-size: 2em;
 }
 
 .fa-code {
   grid-area: code-icon;
-  font-size: 2em; 
+  font-size: 2em;
 }
 
 #presentation-main {
@@ -91,12 +88,11 @@ main {
 }
 
 footer {
-  /* border: 1px solid blue; */
-  grid-area: f;
+  grid-area: footer;
   margin-bottom: 1em;
 
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1fr;
   grid-template-areas:
   "phrase"
   "connect-icons";
@@ -119,23 +115,4 @@ footer i{
 
 footer i:hover {
   transform: scale(1.5);
-}
-
-/* Media Query for Tablets and lower widgets devices */
-@media (min-width: 320px) and (max-width: 991px) {
-  header {
-    /* border: 1px solid red; */
-
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-areas:
-    "name"
-    "links"
-    "hr";
-    align-items: center;
-  }
-
-  #name-header, #nav-header {
-    margin: 0;
-    justify-self: center;
-  }
 }
