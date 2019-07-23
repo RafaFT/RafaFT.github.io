@@ -99,12 +99,12 @@ footer {
   justify-items: center;
 }
 
-footer p {
+footer h2 {
   grid-area: phrase;
   font-size: 1.5em;
 }
 
-#connection-icons {
+footer ul {
   grid-area: connect-icons;
   font-size: 2em;
 }
