@@ -62,7 +62,7 @@ header {
   padding: 0;
 }
 
-section {
+main {
   /* border: 1px solid green; */
   grid-area: s;
   margin: 5% 0 8% 0;
@@ -82,11 +82,11 @@ section {
   font-size: 2em; 
 }
 
-#presentation-section {
+#presentation-main {
   grid-area: phrase;
 }
 
-#presentation-section ul {
+#presentation-main ul {
   grid-area: stack-icons;
 }
 
