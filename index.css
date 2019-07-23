@@ -24,7 +24,7 @@ ul li {
 }
 
 /* CSS values for desktop */
-#grid-container-body {
+body {
     /* border: 1px solid black; */
     display: grid;
     grid-template-columns: repeat(12, 1fr);
