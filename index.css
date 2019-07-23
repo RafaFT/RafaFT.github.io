@@ -49,12 +49,6 @@ header#grid-container-header {
     align-items: center;
 }   
 
-#name-header {
-    margin-left: 1em;
-    grid-area: name;
-    font-size: 1.5em;
-}
-
 #nav-header {
     grid-area: links;
     justify-self: end;
