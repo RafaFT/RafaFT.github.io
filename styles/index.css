@@ -50,7 +50,13 @@ h1 {
 }
 
 #nav-header {
+  margin: 0 0.5em 0 0.5em;
   grid-area: nav;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 1em;
+  justify-items: center;
+  overflow-x: scroll;
 }
 
 #div-hr {
