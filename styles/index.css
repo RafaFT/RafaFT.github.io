@@ -46,21 +46,21 @@ header {
 h1 {
   grid-area: name;
   font-size: 1.5em;
-  margin: 0.2em auto;
+  margin: 0.5em auto 0 auto;
 }
 
 #nav-header {
-  margin: 0 0.5em 0 0.5em;
   grid-area: nav;
+  padding: 0 0.7em 0 0.7em;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   column-gap: 1em;
   justify-items: center;
   overflow-x: scroll;
+  line-height: 3em;
 }
 
 #div-hr {
-  margin-top: 0.5em;
   grid-area: hr;
 }
 
@@ -96,8 +96,7 @@ section {
 
 footer {
   grid-area: footer;
-  margin-bottom: 1em;
-
+  padding-bottom: 1em;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
