@@ -15,6 +15,7 @@ a {
   text-decoration: none;
 }
 
+
 ul li {
   margin: 0.5em;
   display: inline;
@@ -51,7 +52,7 @@ h1 {
 
 #nav-header {
   grid-area: nav;
-  padding: 0 0.7em 0 0.7em;
+  margin: 0 0.7em 0 0.7em;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   column-gap: 1em;
@@ -121,4 +122,14 @@ footer i{
 
 footer i:hover {
   transform: scale(1.5);
+}
+
+/* Desktops */
+@media (min-width: 1024px) {
+  header {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+    "name nav"
+    "hr hr";
+  }
 }
