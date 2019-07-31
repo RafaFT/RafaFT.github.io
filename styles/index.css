@@ -11,8 +11,9 @@ html{
   height: 100%;
 }
 
-a {
-  text-decoration: none;
+a, a:visited, a:hover, a:active {
+    color: #0000FF;
+    text-decoration: none;
 }
 
 
